@@ -1,5 +1,6 @@
-# alpine-jdk8
+# clj-alpine-jdk8
+
 
 ```bash
-docker image build -t clojure-alpine:1.10.1 .
+docker image build -t clj-alpine-jdk8:1.10.1 .
 ```
