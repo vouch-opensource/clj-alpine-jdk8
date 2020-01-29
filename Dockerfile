@@ -1,4 +1,4 @@
-FROM woahbase/alpine-openjdk8
+FROM adoptopenjdk/openjdk8:alpine-slim
 
 ENV CLOJURE_VERSION=1.10.1.483
 
@@ -8,7 +8,8 @@ RUN apk add --update --no-cache curl bash
 RUN wget https://download.clojure.org/install/linux-install-$CLOJURE_VERSION.sh
 RUN chmod +x linux-install-$CLOJURE_VERSION.sh
 RUN ./linux-install-$CLOJURE_VERSION.sh
-RUN /usr/local/bin/clojure -e "(clojure-version)"
+RUN clojure -e "(clojure-version)"
+RUN apk del curl
 
-CMD /usr/local/bin/clojure
+CMD clojure
 

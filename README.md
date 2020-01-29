@@ -1,6 +1,5 @@
 # clj-alpine-jdk8
 
+An installation of Clojure version `1.10.1` on top of `adoptopenjdk/openjdk8:alpine-slim`
 
-```bash
-docker image build -t clj-alpine-jdk8:1.10.1 .
-```
+The image includes the needed build and runtime dependencies
